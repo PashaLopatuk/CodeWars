@@ -1,0 +1,8 @@
+def permutations(word):
+    if len(word) < 2:
+        yield word
+    else:
+        for i, letter in enumerate(word):
+            if not letter in word[:i]:
+                for j in permutations(word[:i]+word[i+1:]):
+                    yield j+letter 
