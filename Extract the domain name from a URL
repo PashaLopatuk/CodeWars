@@ -1,0 +1,9 @@
+def domain_name(url):
+    if '//' in url:
+        r = list(url.split("//"))[1].split('.')
+    else:
+        r = url.split('.')
+    if r[0] == "www":
+        return r[1]
+    else:
+        return r[0]
