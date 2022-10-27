@@ -1,0 +1,10 @@
+def valid_parentheses(string):
+    counter = 0
+    for i in range(len(string)):
+        if string[i] == '(':
+            counter+=1
+        elif string[i]== ')':
+            counter-=1
+            if counter < 0:
+                return False
+    return counter == 0
